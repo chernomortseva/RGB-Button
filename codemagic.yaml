@@ -3,6 +3,11 @@ workflows:
     name: iOS Workflow
     environment:
       xcode: latest
+    integrations:
+      app_store_connect:
+        api_key_id: $APP_STORE_CONNECT_API_KEY_ID
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        private_key: $APP_STORE_CONNECT_PRIVATE_KEY
     scripts:
       - name: Install dependencies
         script: |
